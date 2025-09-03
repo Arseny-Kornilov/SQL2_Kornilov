@@ -1,59 +1,28 @@
-# Домашнее задание к занятию "`Система мониторинга Zabbix. Часть 2`" - `Корнилов Арсений`
+# Домашнее задание к занятию "`Система мониторинга Prometheus. Часть 2`" - `Корнилов Арсений`
 
 ---
 
 ### Задание 1
-
-Создайте свой шаблон, в котором будут элементы данных, мониторящие загрузку CPU и RAM хоста.
-
-Процесс выполнения
-Выполняя ДЗ сверяйтесь с процессом отражённым в записи лекции.
-В веб-интерфейсе Zabbix Servera в разделе Templates создайте новый шаблон
-Создайте Item который будет собирать информацию об загрузке CPU в процентах
-Создайте Item который будет собирать информацию об загрузке RAM в процентах
+Создайте файл с правилом оповещения, как в лекции, и добавьте его в конфиг Prometheus.
 
 ОТВЕТ:
-<img width="1216" height="640" alt="image" src="https://github.com/user-attachments/assets/d920bd4a-4d7a-47a5-aace-8fd0a527f456" />
-
-
-
-
+<img width="2496" height="355" alt="image" src="https://github.com/user-attachments/assets/64afded9-43e6-4223-a705-f05958bde379" />
 
 ---
 
-### Задание 2-3
-
-Добавьте в Zabbix два хоста и задайте им имена <фамилия и инициалы-1> и <фамилия и инициалы-2>. Например: ivanovii-1 и ivanovii-2.
-
-Процесс выполнения
-Выполняя ДЗ сверяйтесь с процессом отражённым в записи лекции.
-Установите Zabbix Agent на 2 виртмашины, одной из них может быть ваш Zabbix Server
-Добавьте Zabbix Server в список разрешенных серверов ваших Zabbix Agentов
-Добавьте Zabbix Agentов в раздел Configuration > Hosts вашего Zabbix Servera
-Прикрепите за каждым хостом шаблон Linux by Zabbix Agent
-Проверьте что в разделе Latest Data начали появляться данные с добавленных агентов
-Зайдите в настройки каждого хоста и в разделе Templates прикрепите к этому хосту ваш шаблон
-Так же к каждому хосту привяжите шаблон Linux by Zabbix Agent
-Проверьте что в раздел Latest Data начали поступать необходимые данные из вашего шаблона
+### Задание 2
+Установите Alertmanager и интегрируйте его с Prometheus.
 
 ОТВЕТ:
-<img width="1216" height="802" alt="image" src="https://github.com/user-attachments/assets/4e71dc8e-48ae-488a-af1b-fe9571fa8971" />
-<img width="1214" height="805" alt="image" src="https://github.com/user-attachments/assets/ce18d4fd-db12-48f2-85b5-5e35fb59ef2e" />
-<img width="1213" height="805" alt="image" src="https://github.com/user-attachments/assets/a313b368-18e6-4582-a4ed-152119dd2721" />
-
-
-
+<img width="2498" height="580" alt="image" src="https://github.com/user-attachments/assets/d62b2b5c-8325-4027-9fca-5ece7a9ded91" />
+<img width="2489" height="807" alt="image" src="https://github.com/user-attachments/assets/5776b974-5805-40e9-8731-e14379fa4451" />
 
 ---
 
-### Задание 4
-
-Создайте свой кастомный дашборд.
-
-Процесс выполнения
-Выполняя ДЗ сверяйтесь с процессом отражённым в записи лекции.
-В разделе Dashboards создайте новый дашборд
-Разместите на нём несколько графиков на ваше усмотрение.
+### Задание 3
+Активируйте экспортёр метрик в Docker и подключите его к Prometheus.
 
 ОТВЕТ:
-<img width="1217" height="805" alt="image" src="https://github.com/user-attachments/assets/530ef714-2040-498f-89bd-84b1c9e865a5" />
+<img width="2491" height="833" alt="image" src="https://github.com/user-attachments/assets/e23ef136-41a4-44bb-8f1c-09014ba4f858" />
+<img width="2495" height="735" alt="image" src="https://github.com/user-attachments/assets/e5b6f8c3-4f13-4c3f-8409-6b4112410cf1" />
+
