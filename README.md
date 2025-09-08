@@ -10,3 +10,12 @@
 ОТВЕТ:
 
 <img width="1301" height="398" alt="image" src="https://github.com/user-attachments/assets/27a26df9-65f0-4e16-8631-b6d45fc15f20" />
+
+Задание 2
+Запустите на своей виртуальной машине три простых сервера Python на разных портах
+Настройте балансировку Weighted Round Robin на 7-м уровне, чтобы первый сервер имел вес 2, второй — 3, а третий — 4
+HAproxy должен балансировать только тот HTTP-трафик, который адресован домену example.local
+Для проверки отправьте файл конфигурации haproxy, а также скриншоты, на которых видно перенаправление запросов на разные серверы при обращении к HAProxy с использованием домена example.local и без него.
+
+ОТВЕТ:
+<img width="1300" height="405" alt="image" src="https://github.com/user-attachments/assets/e21caeb1-0b8c-4787-aeaf-34dab4ee69d2" />
