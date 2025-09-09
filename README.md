@@ -9,7 +9,8 @@
 
 ОТВЕТ:
 
-<img width="1301" height="398" alt="image" src="https://github.com/user-attachments/assets/27a26df9-65f0-4e16-8631-b6d45fc15f20" />
+<img width="659" height="222" alt="image" src="https://github.com/user-attachments/assets/41b34dba-37ec-4a16-ae76-bf1c17b53625" />
+
 
 ### Задание 2
 Запустите на своей виртуальной машине три простых сервера Python на разных портах
