@@ -19,3 +19,5 @@ HAproxy должен балансировать только тот HTTP-тра�
 
 ОТВЕТ:
 
+<img width="1302" height="542" alt="image" src="https://github.com/user-attachments/assets/698c7bbd-663d-497e-b981-fb8eddd6a4ce" />
+
