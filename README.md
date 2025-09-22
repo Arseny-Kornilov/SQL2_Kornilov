@@ -19,6 +19,6 @@
 Сделайте запрос на 80 порт на внешний IP-адрес балансировщика и убедитесь, что вы получаете ответ в виде дефолтной страницы Nginx.
 
 ОТВЕТ:
-<img width="707" height="182" alt="image" src="https://github.com/user-attachments/assets/a5ddc99e-b364-4ef7-b123-12200c0f0a83" />
-<img width="681" height="25" alt="image" src="https://github.com/user-attachments/assets/3b55165c-4652-4049-8179-f053e9ab5490" />
-<img width="1304" height="216" alt="image" src="https://github.com/user-attachments/assets/7ee67a48-dd27-4a1a-aaf8-a896d6fb1e90" />
+<img width="971" height="867" alt="image" src="https://github.com/user-attachments/assets/a97c9e49-9312-49ea-afd5-5df0533c9325" />
+<img width="2495" height="798" alt="image" src="https://github.com/user-attachments/assets/9a24a349-6f90-424e-9d1a-b5fd39a34eeb" />
+
