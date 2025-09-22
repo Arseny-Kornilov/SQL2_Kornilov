@@ -19,6 +19,7 @@
 Сделайте запрос на 80 порт на внешний IP-адрес балансировщика и убедитесь, что вы получаете ответ в виде дефолтной страницы Nginx.
 
 ОТВЕТ:
+terraform playbook https://github.com/Arseny-Kornilov/Fault_tolerance.Kornilov/blob/main/terraform-playbook
 <img width="971" height="867" alt="image" src="https://github.com/user-attachments/assets/a97c9e49-9312-49ea-afd5-5df0533c9325" />
 <img width="2495" height="798" alt="image" src="https://github.com/user-attachments/assets/9a24a349-6f90-424e-9d1a-b5fd39a34eeb" />
 
