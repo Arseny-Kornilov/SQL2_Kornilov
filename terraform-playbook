@@ -1,0 +1,115 @@
+resource "yandex_vpc_network" "main" {
+  name = "main-network"
+}
+
+resource "yandex_vpc_subnet" "foo" {
+  zone           = "ru-central1-a"
+  network_id     = yandex_vpc_network.main.id
+  v4_cidr_blocks = ["10.5.0.0/24"]
+}
+
+resource "yandex_vpc_security_group" "default" {
+  name = "default-sg"
+  network_id = yandex_vpc_network.main.id
+
+  ingress {
+    description = "Allow SSH access"
+    protocol = "TCP"
+    v4_cidr_blocks = ["0.0.0.0/0"]
+    port = 22
+  }
+
+  ingress {
+    description = "Allow HTTP access"
+    protocol = "TCP"
+    v4_cidr_blocks = ["0.0.0.0/0"]
+    port = 80
+  }
+
+  egress {
+    description = "Allow all outbound traffic"
+    protocol = "ANY"
+    v4_cidr_blocks = ["0.0.0.0/0"]
+    from_port = 0
+    to_port = 65535
+  }
+} 
+
+
+resource "yandex_compute_instance" "vm" {
+  count = 2
+
+  name        = "vm${count.index}"
+  platform_id = "standard-v3"
+  zone        = "ru-central1-a"
+
+  boot_disk {
+    initialize_params {
+      image_id = "fd84nt41ssoaapgql97p"
+      size     = 8
+    }
+  }
+
+  resources {
+    cores  = 2
+    memory = 4
+  }
+
+  network_interface {
+    index     = 0
+    subnet_id = yandex_vpc_subnet.foo.id
+    nat       = true
+    security_group_ids = [yandex_vpc_security_group.default.id]
+  }
+
+  metadata = {
+    user-data = file("./cloud-init.yml")  # Используйте file() для чтения файла
+    serial-port-enable = 1
+    ssh-keys = "vboxuser:${file("~/.ssh/id_ed25519.pub")}"
+  }
+}
+
+resource "yandex_lb_target_group" "tg" {
+  name = "target-group"
+
+  dynamic "target" {
+    for_each = yandex_compute_instance.vm
+    content {
+      subnet_id = yandex_vpc_subnet.foo.id
+      address   = target.value.network_interface[0].ip_address
+    }
+  }
+}
+
+resource "yandex_lb_network_load_balancer" "lb" {
+  name = "http-lb"
+  deletion_protection = false
+
+  listener {
+    name = "http-listener"
+    port = 80
+    external_address_spec {
+      ip_version = "ipv4"
+    }
+  }
+
+  attached_target_group {
+    target_group_id = yandex_lb_target_group.tg.id
+    healthcheck {
+      name = "http"
+      http_options {
+        port = 80
+        path = "/"
+      }
+    }
+  }
+}
+
+resource "local_file" "inventory" {
+  content  = <<-XYZ
+  [webservers]
+  ${yandex_compute_instance.vm[0].network_interface.0.nat_ip_address}
+  ${yandex_compute_instance.vm[1].network_interface.0.nat_ip_address}
+  XYZ
+  filename = "./hosts.ini"
+}
