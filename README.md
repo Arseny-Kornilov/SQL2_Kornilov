@@ -12,3 +12,6 @@
 
 ОТВЕТ: <img width="2495" height="1204" alt="image" src="https://github.com/user-attachments/assets/fc7816b8-98fa-444f-8e62-55d145be537d" />
 
+
+### Задание 3.Logstash
+Установите и запустите Logstash и Nginx. С помощью Logstash отправьте access-лог Nginx в Elasticsearch.
