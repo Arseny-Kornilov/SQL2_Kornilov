@@ -38,6 +38,7 @@ mysql -u sys_temp -p sakila < sakila-db/sakila-data.sql
 #### 1.8. При работе в IDE сформируйте ER-диаграмму получившейся базы данных. При работе в командной строке используйте команду для получения всех таблиц базы данных. (скриншот)
 Использовал SHOW TABLES;
 <img width="571" height="401" alt="image" src="https://github.com/user-attachments/assets/792070ed-39b9-4fff-92b1-809f4574e03f" />
+
 <img width="461" height="373" alt="image" src="https://github.com/user-attachments/assets/31102987-3c8d-45eb-ba11-5251b155c26a" />
 
 
