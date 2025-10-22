@@ -25,20 +25,22 @@ RANT ALL PRIVILEGES ON *.* TO 'sys_temp'@'localhost' WITH GRANT OPTION;FLUSH PRI
 mysql -u sys_temp -p
 
 
-1.6. По ссылке https://downloads.mysql.com/docs/sakila-db.zip скачайте дамп базы данных.
+#### 1.6. По ссылке https://downloads.mysql.com/docs/sakila-db.zip скачайте дамп базы данных.
 wget https://downloads.mysql.com/docs/sakila-db.zip
 unzip sakila-db.zip
 
 
-1.7. Восстановите дамп в базу данных.
+#### 1.7. Восстановите дамп в базу данных.
 mysql -u sys_temp -p sakila < sakila-db/sakila-schema.sql
 mysql -u sys_temp -p sakila < sakila-db/sakila-data.sql
 
 
-1.8. При работе в IDE сформируйте ER-диаграмму получившейся базы данных. При работе в командной строке используйте команду для получения всех таблиц базы данных. (скриншот)
+#### 1.8. При работе в IDE сформируйте ER-диаграмму получившейся базы данных. При работе в командной строке используйте команду для получения всех таблиц базы данных. (скриншот)
 Использовал SHOW TABLES;
 <img width="571" height="401" alt="image" src="https://github.com/user-attachments/assets/792070ed-39b9-4fff-92b1-809f4574e03f" />
 <img width="461" height="373" alt="image" src="https://github.com/user-attachments/assets/31102987-3c8d-45eb-ba11-5251b155c26a" />
 
 
 ### Задание 2.
+Составьте таблицу, используя любой текстовый редактор или Excel, в которой должно быть два столбца: в первом должны быть названия таблиц восстановленной базы, во втором названия первичных ключей этих таблиц. Пример: (скриншот/текст)
+<img width="182" height="364" alt="image" src="https://github.com/user-attachments/assets/818fbd10-7d20-4656-8010-5dfb8bbac771" />
