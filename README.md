@@ -12,7 +12,7 @@
 
 ### Задание 3.
 Получите последние пять аренд фильмов.
-<img width="1032" height="214" alt="image" src="https://github.com/user-attachments/assets/e276b587-dc27-4b06-9789-8a09c2504328" />
+<img width="1029" height="289" alt="image" src="https://github.com/user-attachments/assets/1c1ffe45-9cda-49ea-b83c-665ec49614ae" />
 
 
 ### Задание 4.
