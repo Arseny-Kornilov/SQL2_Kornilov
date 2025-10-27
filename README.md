@@ -16,5 +16,6 @@
 
 ### Задание 3.
 #### Получите информацию, за какой месяц была получена наибольшая сумма платежей, и добавьте информацию по количеству аренд за этот месяц.
-<img width="833" height="198" alt="image" src="https://github.com/user-attachments/assets/832dd62e-f4cd-4572-b55c-98394a6739e4" />
+<img width="1024" height="196" alt="image" src="https://github.com/user-attachments/assets/e328c436-aad7-45fd-bec6-5072e0d9ac61" />
+
 
